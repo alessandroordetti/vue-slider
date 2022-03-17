@@ -2,6 +2,7 @@ const app = new Vue (
     {
         el: '#app',
         data: {
+            title: 'Cosa vuoi guardare stasera?',
             activeImage : 0,
             images: [
                 {
@@ -47,6 +48,10 @@ const app = new Vue (
                 } else {
                     this.activeImage++;
                 }
+            },
+
+            changeSlideIndex (imageIndex) {
+                this.activeImage = imageIndex;
             }
         }
     });

@@ -21,8 +21,8 @@
     <main id="app">
         <div class="container-fluid p-5">
             <div class="row text-center">
-                <div class="col-12 p-3" id="my-before-carousel">
-
+                <div class="col-12 p-3" id="my-before-carousel" :class="title">
+                    <h1>  {{title}} </h1>
                 </div>
 
                 <div class="col-12 p-5">
@@ -47,7 +47,7 @@
                                 <span class="my-prev-hook"></span>
                             </div>
                             
-                            <div class="my-thumbnails-container d-inline px-3" v-for="thumbnail in images">
+                            <div class="my-thumbnails-container d-inline px-3" v-for="(thumbnail, index) in images" :class="(index === activeImage) ? 'active-thumbnail' : 'off-thumbnail'" @click="changeSlideIndex(index)">
                                 <img class="img-fluid" :src="thumbnail.image" :alt="thumbnail.name">
                             </div>
 

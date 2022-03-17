@@ -76,5 +76,9 @@ div.my-next > span::after{
 }
 
 .active-thumbnail {
-    border: 1px solid rgba(212, 25, 25, 0.932);
+    border: 1px solid white;
+}
+
+.off-thumbnail {
+    filter: brightness(.4);
 }
